@@ -8,7 +8,7 @@ int solve(int n) {
 	if (n <= 1)
 		return 1;
 	int& ret = dp[n];
-	//if (ret != -1) return ret;
+	if (ret != -1) return ret;
 
 	ret = (solve(n - 1) + solve(n - 2)) % 10007;
 	return ret;
